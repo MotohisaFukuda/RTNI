@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+# A SYMBOLIC INTEGRATOR FOR HAAR-RANDOM TENSOR NETWORKS
+
 
 You can use the [editor on GitHub](https://github.com/MotohisaFukuda/RTNI/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 

@@ -48,5 +48,5 @@ then the package and the precomputed functions have been correctly loaded.
 
 ## Further steps
 
-* Look at the [Sample code for MATHEMATICA]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
+* Look at the [Sample code for MATHEMATICA](MATHEMATICA/examples_MATHEMATICA.md) 
 

@@ -25,9 +25,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 
 ## LICENSE
-This project is licensed under the terms of the [GNU GENERAL PUBLIC LICENSE v3.0](https://github.com/MotohisaFukuda/RTNI/edit/master/LICENSE.txt)
-
-When using this software, please include the reference
+This project is licensed under the terms of the [GNU GENERAL PUBLIC LICENSE v3.0](https://github.com/MotohisaFukuda/RTNI/edit/master/LICENSE.txt). When using this software, please include the reference
 
 RTNI - A symbolic integrator for Haar-random tensor networks, Motohisa Fukuda, Robert König and Ion Nechita, [arXiv:1902.07209](https://arxiv.org/abs/1902.07209).
 

@@ -12,7 +12,7 @@ A detailed description of the functionality of this package with examples of its
 ### PYTHON
 
 * Follow the [RTNI setup guide for PYTHON](https://github.com/MotohisaFukuda/RTNI/blob/master/gettingstarted_PYTHON.md) to setup  RTNI.
-* Look at the [Sample code for PYTHON](MATHEMATICA/examples_PYTHON.md)
+* Look at the [Usage instructions and sample code for PYTHON](PYTHON/README.md)
 
 
 

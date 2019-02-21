@@ -23,6 +23,11 @@ You can use the [editor on GitHub](https://github.com/MotohisaFukuda/RTNI/edit/m
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+
+## LICENSE
+This project is licensed under the terms of the [GNU GENERAL PUBLIC LICENSE v3.0](https://github.com/MotohisaFukuda/RTNI/edit/master/LICENSE.txt)
+
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

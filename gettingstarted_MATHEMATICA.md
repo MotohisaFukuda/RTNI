@@ -48,5 +48,5 @@ then the package and the precomputed functions have been correctly loaded.
 
 ## Further steps
 
-* Look at the [Sample code for MATHEMATICA](MATHEMATICA/examples_MATHEMATICA.md) 
+* Look at the [List of files and sample code for MATHEMATICA](MATHEMATICA/README.md) 
 

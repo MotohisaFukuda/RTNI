@@ -1,4 +1,19 @@
-# A SYMBOLIC INTEGRATOR FOR HAAR-RANDOM TENSOR NETWORKS
+# RTNI -- A SYMBOLIC INTEGRATOR FOR HAAR-RANDOM TENSOR NETWORKS
+
+RTNI is symbolic computer algebra package for MATHEMATICA and PHYTHON. It computes averages of tensor networks containing multiple Haar-distributed random unitary matrices and symbolic tensors.  Such tensor networks are represented as multigraphs, with vertices corresponding to tensors or random unitaries and edges corresponding to tensor contractions. Input and output spaces of random unitaries may be subdivided into arbitrary tensor factors, with dimensions treated symbolically. The algorithm implements the graphical Weingarten calculus and produces a weighted sum of tensor networks representing the average over the unitary group. Associated visualization routines are also provided.
+
+A detailed description of the functionality of this package with examples of its usage is available at [arXiv:paper](https://arxiv.org/abs/1902.07209).
+
+## Setup for MATHEMATICA
+
+* Follow the [RTNI setup guide for MATHEMATICA](https://github.com/appium/appium/blob/master/docs/en/about-appium/getting-started.md) to install RTNI.
+* Look at the [Sample code for MATHEMATICA]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
+
+## Setup for PYTHON
+
+* Follow the [RTNI setup guide for PYTHON](https://github.com/appium/appium/blob/master/docs/en/about-appium/getting-started.md) to install RTNI.
+* Look at the [Sample code for PYTHON]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
+
 
 
 You can use the [editor on GitHub](https://github.com/MotohisaFukuda/RTNI/edit/master/README.md) to maintain and preview the content for your website in Markdown files.

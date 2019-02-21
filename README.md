@@ -4,23 +4,16 @@ RTNI is symbolic computer algebra package for MATHEMATICA and PHYTHON. <img alig
 
 A detailed description of the functionality of this package with examples of its usage is available at [arXiv:paper](https://arxiv.org/abs/1902.07209).
 
-## Setup
-
-### Setup for MATHEMATICA
+### MATHEMATICA
 
 * Follow the [RTNI setup guide for MATHEMATICA](https://github.com/MotohisaFukuda/RTNI/blob/master/gettingstarted_MATHEMATICA.md) to setup RTNI.
-* Look at the [Sample code for MATHEMATICA]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
+* Look at the [Sample code for MATHEMATICA](MATHEMATICA/examples_MATHEMATICA.md)
 
-### Setup for PYTHON
+### PYTHON
 
 * Follow the [RTNI setup guide for PYTHON](https://github.com/MotohisaFukuda/RTNI/blob/master/gettingstarted_PYTHON.md) to setup  RTNI.
-* Look at the [Sample code for PYTHON]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
+* Look at the [Sample code for PYTHON](MATHEMATICA/examples_PYTHON.md)
 
-
-
-You can use the [editor on GitHub](https://github.com/MotohisaFukuda/RTNI/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 
 ## LICENSE

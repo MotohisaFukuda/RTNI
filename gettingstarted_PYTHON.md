@@ -3,7 +3,7 @@
 ## Dependencies
 
 The PYTHON implementation of RTNI has been developed and tested using PYTHON version 3. For symbolic computation, the
-* sympy package is used.
+* [sympy](https://www.sympy.org/en/index.html) package is used.
 
 
 

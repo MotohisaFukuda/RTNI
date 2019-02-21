@@ -11,9 +11,19 @@ The package is contained in the Wolfram Language Package file RTNI.wl. Precomput
 * Place RTNI.wl in a directory.
 * Place the subfolder precomputedWG in the same directory.
 * Open/Create a new mathematica-file in the directory.
-* Load the RTNI package as shown:
+* Load the RTNI package using the following commands
 
+```markdown
+SetDirectory[NotebookDirectory[]];
+<< RTNI`
+```
 
+If the corresponding out is of the form
+```
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
 
 
 

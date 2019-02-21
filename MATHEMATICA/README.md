@@ -9,4 +9,4 @@ A few examples for the usage of the RTNI-MATHEMATICA package are provided here. 
 
 The files in this directory include:
 * [RTNI.wl](RTNI.wl) main RTNI MATHEMATICA package
-
+* [precomputedWG](precomputedWG) subdirectory with precomputed Weingarten functions

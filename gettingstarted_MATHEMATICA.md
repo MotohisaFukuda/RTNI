@@ -6,7 +6,7 @@ The MATHEMATICA implementation of RTNI has been developed and tested using Wolfr
 
 ## Installation
 
-The package is contained in the Wolfram Language Package file RTNI.wl. Precomputed Weingarten functions are provided in the subfolder precomputedWG. Proceed as follows:
+The package is contained in the Wolfram Language Package file [RTNI.wl](MATHEMATICA/RTNI.wl). Precomputed Weingarten functions are provided in the subfolder precomputedWG. Proceed as follows:
 
 * Place RTNI.wl in a directory.
 * Place the subfolder precomputedWG in the same directory.

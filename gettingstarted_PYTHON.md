@@ -52,5 +52,5 @@ then the package and the precomputed functions have been correctly loaded.
 
 ## Further steps
 
-* Look at the [list of files and example code for PYTHON](PYTHON/README.md`)
+* Look at the [list of files and example code for PYTHON](PYTHON/README.md)
 

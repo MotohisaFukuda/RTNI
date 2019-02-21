@@ -4,11 +4,11 @@ A few examples for the usage of the RTNI-PYTHON package are provided here. A det
 
 * [Examples from the paper](examples.py) for the usage of RTNI
 
-The files provided are the following:
+The following files are included:
 
 * [IHU_source.py](IHU_source.py) - main python file for the RTNI package
 * [WFG_source.py](WFG_source.py) - python file for the precomputation of Weingarten functions
 * [example_WFG.py](example_WFG.py) - example file for the usage of WFG_source.py
 * [Weingarten/pkl2text.py](Weingarten/pkl2text.py) - program for conversion of pkl files to txt 
 
-
+In addition, precomputed Weingarten functions are provided in the subdirectory **Weingarten**.

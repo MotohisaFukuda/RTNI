@@ -4,14 +4,17 @@ RTNI is symbolic computer algebra package for MATHEMATICA and PHYTHON. It comput
 
 A detailed description of the functionality of this package with examples of its usage is available at [arXiv:paper](https://arxiv.org/abs/1902.07209).
 
-## Setup for MATHEMATICA
 
-* Follow the [RTNI setup guide for MATHEMATICA](https://github.com/appium/appium/blob/master/docs/en/about-appium/getting-started.md) to install RTNI.
+## Setup
+
+### Setup for MATHEMATICA
+
+* Follow the [RTNI setup guide for MATHEMATICA](https://https://github.com/MotohisaFukuda/RTNI/edit/master/gettingstarted_MATHEMATICA.md) to setup RTNI.
 * Look at the [Sample code for MATHEMATICA]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
 
-## Setup for PYTHON
+### Setup for PYTHON
 
-* Follow the [RTNI setup guide for PYTHON](https://github.com/appium/appium/blob/master/docs/en/about-appium/getting-started.md) to install RTNI.
+* Follow the [RTNI setup guide for PYTHON](https://https://github.com/MotohisaFukuda/RTNI/edit/master/gettingstarted_PYTHON.md) to setup  RTNI.
 * Look at the [Sample code for PYTHON]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
 
 

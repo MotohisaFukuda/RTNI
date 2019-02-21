@@ -1,4 +1,4 @@
-# RTNI - Setup instructions for MATHEMATICA
+# RTNI - Setup instructions for PYTHON
 
 ## Dependencies
 

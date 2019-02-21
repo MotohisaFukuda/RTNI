@@ -13,16 +13,13 @@ as well as the library python3-tk.
 
 ## Installation
 
-The package is contained in the Wolfram Language Package file RTNI.wl. Precomputed Weingarten functions are provided in the subfolder precomputedWG. Proceed as follows:
+The main routines of the RTNI package are contained in the file [IHU_source.py](PYTHON/IHU_source.py). Precomputed Weingarten functions are provided (respectively generated) in the subfolder [Weingarten](PYTHON/Weingarten).
 
-* Place RTNI.wl in a directory.
-* Place the subfolder precomputedWG in the same directory.
-* Open/Create a new mathematica-file in the directory.
-* Load the RTNI package using the following commands
+* Place these files into the same directly.
+* Load the RTNI package using the following command
 
 ```markdown
-SetDirectory[NotebookDirectory[]];
-<< RTNI`
+from IHU_source import *
 ```
 
 If the corresponding out is of the form
@@ -55,5 +52,5 @@ then the package and the precomputed functions have been correctly loaded.
 
 ## Further steps
 
-* Look at the [Usage instructions/sample code for PYTHON](PYTHON/README.md`)
+* Look at the [list of files and example code for PYTHON](PYTHON/README.md`)
 

@@ -1,6 +1,6 @@
 # RTNI - MATHEMATICA files and usage examples
 
-A few examples for the usage of the RTNI-MATHEMATICA package are provided here. A detailed description of these example can be found in [arXiv:paper](https://arxiv.org/abs/1902.07209).
+A few examples for the usage of the RTNI-MATHEMATICA package are provided here. A detailed description of these example can be found in [arXiv:paper](https://arxiv.org/abs/1902.????).
 
 * [Examples from the paper](examples_paper.nb) for the usage of RTNI
 * [Additional holographic tensor network examples](examples_holographictensornetworks.nb) for the computation of Renyi entropies of holographic tensor networks

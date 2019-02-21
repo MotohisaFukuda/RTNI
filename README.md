@@ -4,7 +4,11 @@ RTNI is symbolic computer algebra package for MATHEMATICA and PHYTHON. It comput
 
 A detailed description of the functionality of this package with examples of its usage is available at [arXiv:paper](https://arxiv.org/abs/1902.07209).
 
-(https://github.com/MotohisaFukuda/RTNI/blob/master/rtnifigure.pdf)
+<object data="http://github.com/MotohisaFukuda/RTNI/blob/master/rtnifigure.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="http://github.com/MotohisaFukuda/RTNI/blob/master/rtnifigure.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://github.com/MotohisaFukuda/RTNI/blob/master/rtnifigure.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 ## Setup
 

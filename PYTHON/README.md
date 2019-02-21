@@ -11,4 +11,4 @@ The following files are included:
 * [example_WFG.py](example_WFG.py) - example file for the usage of WFG_source.py
 * [Weingarten/pkl2text.py](Weingarten/pkl2text.py) - program for conversion of pkl files to txt 
 
-In addition, precomputed Weingarten functions are provided in the subdirectory **Weingarten**.
+In addition, precomputed Weingarten functions are provided in the subdirectory [Weingarten](Weingarten).

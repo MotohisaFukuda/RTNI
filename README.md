@@ -7,12 +7,12 @@ A detailed description of the functionality of this package with examples of its
 ### MATHEMATICA
 
 * Follow the [RTNI setup guide for MATHEMATICA](https://github.com/MotohisaFukuda/RTNI/blob/master/gettingstarted_MATHEMATICA.md) to setup RTNI.
-* Look at the [Sample code for MATHEMATICA](MATHEMATICA/examples_MATHEMATICA.md)
+* Look at the [list of files and sample code for MATHEMATICA](MATHEMATICA/examples_MATHEMATICA.md)
 
 ### PYTHON
 
 * Follow the [RTNI setup guide for PYTHON](https://github.com/MotohisaFukuda/RTNI/blob/master/gettingstarted_PYTHON.md) to setup  RTNI.
-* Look at the [Usage instructions and sample code for PYTHON](PYTHON/README.md)
+* Look at the [list of files and sample code for PYTHON](PYTHON/README.md)
 
 
 

@@ -55,5 +55,5 @@ then the package and the precomputed functions have been correctly loaded.
 
 ## Further steps
 
-* Look at the [Sample code for PYTHON]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
+* Look at the [Usage instructions/sample code for PYTHON](PYTHON/Usageandexamples.md`)
 

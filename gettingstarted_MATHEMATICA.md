@@ -18,7 +18,7 @@ SetDirectory[NotebookDirectory[]];
 << RTNI`
 ```
 
-If the corresponding out is of the form
+If the corresponding output is of the form
 ```
 Package RTNI (Random Tensor Network Integrator) version 1.0.5 (last modification: 26/01/2019).
 

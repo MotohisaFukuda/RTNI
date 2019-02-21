@@ -3,7 +3,11 @@
 ## Dependencies
 
 The PYTHON implementation of RTNI has been developed and tested using PYTHON version 3. For symbolic computation, the
-* [sympy](https://www.sympy.org/en/index.html) package is used.
+* [sympy](https://www.sympy.org/en/index.html) package is used. 
+The graph visualization routines additionally require the following python3 packages:
+* [matplotlib](https://matplotlib.org/)
+* [networkx](https://networkx.github.io/)
+as well as the library python3-tk.
 
 
 
@@ -51,5 +55,5 @@ then the package and the precomputed functions have been correctly loaded.
 
 ## Further steps
 
-* Look at the [Sample code for MATHEMATICA]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
+* Look at the [Sample code for PYTHON]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
 

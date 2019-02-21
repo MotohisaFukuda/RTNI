@@ -20,9 +20,6 @@ SetDirectory[NotebookDirectory[]];
 
 If the corresponding out is of the form
 ```
-SetDirectory[NotebookDirectory[]];
-<< RTNI`
-
 Package RTNI (Random Tensor Network Integrator) version 1.0.5 (last modification: 26/01/2019).
 
 Loading precomputed Weingarten Functions from /precomputedWG/functions1.txt
@@ -47,7 +44,7 @@ Loading precomputed Weingarten Functions from /precomputedWG/functions19.txt
 Loading precomputed Weingarten Functions from /precomputedWG/functions20.txt
 ```
 
-
+then the package and the precomputed functions have been correctly loaded.
 
 ## Further steps
 

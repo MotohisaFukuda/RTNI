@@ -9,12 +9,12 @@ A detailed description of the functionality of this package with examples of its
 
 ### Setup for MATHEMATICA
 
-* Follow the [RTNI setup guide for MATHEMATICA](https://https://github.com/MotohisaFukuda/RTNI/edit/master/gettingstarted_MATHEMATICA.md) to setup RTNI.
+* Follow the [RTNI setup guide for MATHEMATICA](https://github.com/MotohisaFukuda/RTNI/edit/master/gettingstarted_MATHEMATICA.md) to setup RTNI.
 * Look at the [Sample code for MATHEMATICA]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
 
 ### Setup for PYTHON
 
-* Follow the [RTNI setup guide for PYTHON](https://https://github.com/MotohisaFukuda/RTNI/edit/master/gettingstarted_PYTHON.md) to setup  RTNI.
+* Follow the [RTNI setup guide for PYTHON](https://github.com/MotohisaFukuda/RTNI/edit/master/gettingstarted_PYTHON.md) to setup  RTNI.
 * Look at the [Sample code for PYTHON]  `sample-code/<client-language>/README.md` (e.g.: `sample-code/java/README.md`)
 
 

@@ -13,7 +13,7 @@ import networkx as nx
 import itertools
 import matplotlib.pyplot as plt
 import pickle
-import math
+
 
 
 from WFG_source import *
@@ -314,9 +314,7 @@ def visualizeTN(EW):
     
 def integrateHaarUnitary(EWs, RM_List):
     
-
-
-    # first, making this function polymorphic.
+    ##### making this function polymorphic #####
     if not isinstance(EWs[-1], list):
         EWs = [EWs]
     else:
@@ -327,6 +325,7 @@ def integrateHaarUnitary(EWs, RM_List):
         RM_List = [RM_List]
     else:
         pass
+    ##### up to here #####
 
     ##### mathematica to python #####
     
@@ -338,12 +337,9 @@ def integrateHaarUnitary(EWs, RM_List):
     Dic_PyMa["out"] = "L"
     
     # changing out-in format to L-R format, and changing numbering system to mathematica to python
-    for x in EWs:
-        for y in x[0]:
-            for z in y:
-                z[2] = Dic_PyMa[z[2]]
-                z[3] -= 1
-                
+    EWs_p = [[[[z[0:2]+[Dic_PyMa[z[2]],z[3]-1] for z in y] for y in x[0]] ,x[1]]\
+                  for x in EWs]
+    
     # switching the order of L and R, in order to work like Mathematica package.
     RM_List = [[rm[0],rm[2],rm[1],rm[3]] for rm in RM_List]
     
@@ -351,95 +347,46 @@ def integrateHaarUnitary(EWs, RM_List):
     
     # making a collection of graphs and weights.
     Collections = []
-    for x in EWs:
+    for x in EWs_p:
         Collections += Calc(x[0],x[1],RM_List).Output
     Collections_List = [ [list(c[0].edges()), c[1]] for c in Collections]
-    #print(Collections_List)
+    #print("Collections_List",Collections_List)
     
+ 
     # making a dictionary to get the original form of input diagrams;
     # only for matrices left after the average, considering all graphs in Collections
     Node_Dic = {y: x[0].node[y]['original'] for x in Collections for y in list(x[0])}
-    # finding which matrices are left after the average.
-    Matrices = [x for x,y in groupby(sorted([Node_Dic[x][0:2] for x in Node_Dic]))]
-    #print(Matrices)
-    # checking what IDs each matrix has: [[Matrix,[ID1,ID2,...]],...]
-    Matrices_IDs = [ [a,[ m[1] for m in Matrices if m[0] == a], len(list(b))] for a,b in groupby([x[0] for x in Matrices])]
-    #print(Matrices_IDs)
-    NofM = len(Matrices_IDs)
-    Matrices_shuffled = [ [x[0], list(itertools.permutations(x[1])),x[2]] for x in Matrices_IDs]
-    #print(Matrices_shuffled)
-    
-
-    
-    # making the list of possible permutations, indexed.
-    Possi = [math.factorial(x[2]) for x in Matrices_IDs]
-    # making the lisf of combination of possible permutations, which was indexed.
-    # [(permutation for the first, for the second,...),...]
-    Combi = list(itertools.product(*[list(range(s)) for s in Possi]))
-    #print(Combi)
-    
-    # making the dictionary {'c in Combi'+Matrix+'oldID':Matrix+'oldID'}
-    Dic_full=\
-    {str(c)+Matrices_shuffled[i][0]+str(Matrices_shuffled[i][1][0][j]):\
-     Matrices_shuffled[i][0] + str(Matrices_shuffled[i][1][c[i]][j])\
-     for c in Combi for i in range(NofM) for j in range(Matrices_shuffled[i][2])}
-    #print(Dic_full)
-
-    
-    Ave0 = [[sorted([ sorted(e) for e in Collections_List[0][0]], key = lambda t: t[0] ),\
-            Collections_List[0][1]]]
-    LC = len(Collections_List)
-    if LC == 1:
-        Ave = Ave0
-    else:
-        Ave = Ave0
-        #print(Ave)
-        for gw in Collections_List[1:]:
-            #print('gw',gw)
-            Count1 = 0
-            Candi = [[ [Dic_full[str(c)+e[0][0]+str(e[0][1])] + e[0][2:4],\
-                    Dic_full[str(c)+e[1][0]+str(e[1][1])] + e[1][2:4]]\
-                    for e in gw[0]] for c in Combi]
-            #print(Candi)
-            for c in Candi:
-                Count2 = 0
-                for a in Ave:
-                    if a[0] == sorted([sorted(d) for d in c], key = lambda t: t[0] ):
-                        a[1] += gw[1]
-                        Count2 +=1
-                        break
-                    else:
-                        pass
-                if Count2 == 1:
-                    Count1 +=1
-                    break
-                else:
-                    pass
-            if Count1 == 0:
-                g_sorted = sorted([sorted(e) for e in gw[0]],key = lambda t: t[0]) 
-                Ave.append([g_sorted,gw[1]])
-            else:
-                pass
-    
-    #print('a',Ave)
-    Ave_tidy = [[x[0],simplify(x[1])] for x in Ave]
-    
+    #print("Node_Dic", Node_Dic)
     
     # making the graph data into list data. (EW = Edges and weight)
-    Ave_List = [[[ [Node_Dic[x[0]],Node_Dic[x[1]]] for x in X[0] ] ,X[1]]  for X in Ave_tidy]
+    Ave_EW = [[list(x[0].edges()),x[1]] for x in Collections]
+    # sorting first within each edge, and second edges themselves w.r.t. the first element.
+    Ave_EW_sorted =\
+    [[sorted([sorted(y) for y in x[0]], key = lambda t: t[0]),x[1]] for x in Ave_EW]
+    
+    # putting the same graphs into one group, and summing put their weights. 
+    Ave_EW_grouped = []
+    for x in Ave_EW_sorted:
+        # finding the same graph(s) in the developing new list.
+        # The number of such graphs should be one, though...
+        Ind_same = [i for i in range(len(Ave_EW_grouped)) if Ave_EW_grouped[i][0] == x[0]]
+        if len(Ind_same) >0:
+            Ave_EW_grouped[Ind_same[0]][1] += x[1]
+        else:
+            Ave_EW_grouped.append(x)
+    
+    Ave_EW_grouped_tidy = [[x[0],simplify(x[1])] for x in Ave_EW_grouped]
+    AEgt_List = [[[ [Node_Dic[x[0]],Node_Dic[x[1]]] for x in X[0] ] ,X[1]]  for X in Ave_EW_grouped_tidy]
     
     ##### python to mathematica #####
     
     # changing L-R format to out-in format, and changing numbering system from python to mathematica
-    for x in Ave_List:
-        for y in x[0]:
-            for z in y:
-                z[2] = Dic_PyMa[z[2]]
-                z[3] += 1
+    Ave_List_m = [[[[z[0:2]+[Dic_PyMa[z[2]],z[3]+1] for z in y] for y in x[0]] ,x[1]]\
+                  for x in AEgt_List]
                 
     ##### up to here #####
     
-    return Ave_List   
+    return Ave_List_m  
 
 
 

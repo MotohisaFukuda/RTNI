@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-a copy of "average_graph_tensor12" with a corection in Calc.Reconnection.
 
-@author: M
-"""
 import os.path
 from sympy import symbols, simplify
 from sympy.combinatorics import Permutation

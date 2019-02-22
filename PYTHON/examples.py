@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 21 15:09:42 2019
 
-@author: M
-"""
 
-"""
+
 
 ##### 6.1.1 #####
 
@@ -78,7 +74,7 @@ d = symbols('d')
 Eg = integrateHaarUnitary(gw, ["U", [d], [d], d])
 print(Eg)
 visualizeTN(Eg)
-"""
+
 
 #### 6.4 ####
 from IHU_source import *
@@ -104,5 +100,3 @@ Egt =  Eg[0][1].subs(d,t*k*n)
 Egt_lim = simplify(limit(Egt,n,oo))
 print(Egt_lim)
 
-"""
-"""

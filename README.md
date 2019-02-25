@@ -20,4 +20,4 @@ A detailed description of the functionality of this package with examples of its
 This project is licensed under the terms of the [GNU GENERAL PUBLIC LICENSE v3.0](LICENSE.txt). When using this software, please include the following reference (also in [BibTeX](reference.bib) format)
 
 
-* Motohisa Fukuda, Robert König, and Ion Nechita. RTNI - A symbolic integrator for Haar-random tensor networks. [arXiv:1902.????](https://arxiv.org/abs/1902.????).
+* Motohisa Fukuda, Robert König, and Ion Nechita. RTNI - A symbolic integrator for Haar-random tensor networks. [arXiv:1902.08539](https://arxiv.org/abs/1902.08539).

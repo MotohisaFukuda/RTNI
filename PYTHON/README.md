@@ -1,6 +1,6 @@
 # RTNI - PYTHON usage and examples
 
-A few examples for the usage of the RTNI-PYTHON package are provided here. A detailed description of these example can be found in [arXiv:paper](https://arxiv.org/abs/1902.07209).
+A few examples for the usage of the RTNI-PYTHON package are provided here. A detailed description of these example can be found in [arXiv:1902.08539](https://arxiv.org/abs/1902.08539).
 
 * [Examples from the paper](examples.py) for the usage of RTNI
 

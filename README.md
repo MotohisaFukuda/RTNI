@@ -15,6 +15,9 @@ A detailed description of the functionality of this package with examples of its
 * Look at the [list of files and sample code for PYTHON](PYTHON/README.md)
 * A list of Weingarten functions for permutation size up to 20 can be found [here](https://motohisafukuda.github.io/RTNI/PYTHON/Weingarten/weingarten.html)
 
+### ONLINE
+
+* A light, online version of the code implementing the main integration routine can be found [here](https://github.com/MotohisaFukuda/RTNI_light)
 
 
 ### LICENSE

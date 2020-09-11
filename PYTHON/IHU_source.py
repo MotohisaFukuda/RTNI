@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
+"""
+a copy of "average_graph_tensor12" with a corection in Calc.Reconnection.
 
+@author: M
+"""
 import os.path
 from sympy import symbols, simplify
 from sympy.combinatorics import Permutation
@@ -172,15 +176,25 @@ class Calc:
                 G.remove_node(y)
     
             else: # case the node is a pendant.
-                if G.node[y]['original'][0][-1] != '*' and G.node[y]['original'][2] == 'L' :
-                    side = 1
-                elif G.node[y]['original'][0][-1] == '*' and G.node[y]['original'][2] == 'R':
-                    side = 1
+                if int(nx.__version__[0])<2:
+                    if G.node[y]['original'][0][-1] != '*' and G.node[y]['original'][2] == 'L' :
+                        side = 1
+                    elif G.node[y]['original'][0][-1] == '*' and G.node[y]['original'][2] == 'R':
+                        side = 1
+                    else:
+                        side = 2
+                    w *= self.RM_List[RM_ID][side][G.nodes[y]['original'][3]]
+                    G.remove_node(y)
                 else:
-                    side = 2
-                w *= self.RM_List[RM_ID][side][G.nodes[y]['original'][3]]
-                G.remove_node(y)
-    
+                    if G.nodes[y]['original'][0][-1] != '*' and G.nodes[y]['original'][2] == 'L' :
+                        side = 1
+                    elif G.nodes[y]['original'][0][-1] == '*' and G.nodes[y]['original'][2] == 'R':
+                        side = 1
+                    else:
+                        side = 2
+                    w *= self.RM_List[RM_ID][side][G.nodes[y]['original'][3]]
+                    G.remove_node(y)                    
+
     
         #Multiplying Weingarten function.
         t = len(self.PRE.RM1_grouped[RM_ID])
@@ -302,7 +316,7 @@ def visualizeGraphList0(EW):
 def visualizeTN(EW):
     if isinstance(EW[-1], list):
         for ew in EW:
-           visualizeGraphList0(ew)
+            visualizeGraphList0(ew)
     else:
         visualizeGraphList0(EW)
     
@@ -351,7 +365,10 @@ def integrateHaarUnitary(EWs, RM_List):
  
     # making a dictionary to get the original form of input diagrams;
     # only for matrices left after the average, considering all graphs in Collections
-    Node_Dic = {y: x[0].node[y]['original'] for x in Collections for y in list(x[0])}
+    if int(nx.__version__[0])<2:
+        Node_Dic = {y: x[0].node[y]['original'] for x in Collections for y in list(x[0])}
+    else:
+        Node_Dic = {y: x[0].nodes[y]['original'] for x in Collections for y in list(x[0])}
     #print("Node_Dic", Node_Dic)
     
     # making the graph data into list data. (EW = Edges and weight)
@@ -383,28 +400,6 @@ def integrateHaarUnitary(EWs, RM_List):
     ##### up to here #####
     
     return Ave_List_m  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

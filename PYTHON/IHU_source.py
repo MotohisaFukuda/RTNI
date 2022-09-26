@@ -124,11 +124,20 @@ class WGF:
         self.Dic ={}
         self.Addressbook ={}
         for i in range(len(SDs)):
-            if not os.path.isfile('Weingarten/functions{}.pkl'.format(Sizes[i])):
+            
+            if not os.path.isfile('Weingarten/functions{}.txt'.format(Sizes[i])):
                 Photocopy = WFs(Sizes[i]).wfs
             else:
-                with open('Weingarten/functions{}.pkl'.format(Sizes[i]), 'rb') as file:
-                    Photocopy = pickle.load(file)# Unpickling
+                with open('Weingarten/functions{}.txt'.format(Sizes[i]), 'r') as file:
+                    n= Symbol('n')
+                    Photocopy = eval(file.read())
+            
+#             if not os.path.isfile('Weingarten/functions{}.pkl'.format(Sizes[i])):
+#                 Photocopy = WFs(Sizes[i]).wfs
+#             else:
+#                 with open('Weingarten/functions{}.pkl'.format(Sizes[i]), 'rb') as file:
+#                     Photocopy = pickle.load(file)# Unpickling
+                    
             self.Dic['wg{}'.format(Sizes[i])] = [[p[0],p[1].subs(n,Dims[i])] for p in Photocopy] 
             # Here, substituting n by t the actual size of matrix.
             self.Addressbook['wg{}'.format(Sizes[i])] = [p[0] for p in Photocopy]

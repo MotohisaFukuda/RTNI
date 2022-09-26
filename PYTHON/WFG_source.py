@@ -5,7 +5,7 @@ Created on Tue Jun 26 07:55:00 2018
 @author: M
 """
 import os.path
-import pickle
+# import pickle
 import math
 import copy
 import fractions
@@ -134,17 +134,27 @@ class Memo:
         self.Data = {}
         if self.k == 0:
             self.Data.update({'[][]':1})
-        elif os.path.isfile('SGC/table{}.pkl'.format(self.k)):
-            with open("SGC/table{}.pkl".format(self.k), 'rb') as file:
-                self.Data.update(pickle.load(file))
+            
+        elif os.path.isfile('SGC/table{}.txt'.format(self.k)):
+            with open("SGC/table{}.txt".format(self.k), 'r') as file:
+                self.Data.update(eval(file.read()))
+                
+#         elif os.path.isfile('SGC/table{}.pkl'.format(self.k)):
+#             with open("SGC/table{}.pkl".format(self.k), 'rb') as file:
+#                 self.Data.update(pickle.load(file))
+
         else:
             if not os.path.exists('SGC'):
                 os.makedirs('SGC')
             else:
                 pass
             self.Data.update(CharacterTableCalculator(self.k).Dic)
-            with open("SGC/table{}.pkl".format(self.k), "wb") as fp:   #Pickling
-                pickle.dump(self.Data, fp)
+            
+            with open("SGC/table{}.txt".format(self.k), "w") as fp:
+                fp.write(str(self.Data))
+                
+#             with open("SGC/table{}.pkl".format(self.k), "wb") as fp:   #Pickling
+#                 pickle.dump(self.Data, fp)
             
 #print(Memo(14).Data)
                 
@@ -198,17 +208,28 @@ class SchurPolyOganizer:
     def __init__(self,k):
         self.k = k
         self.List = {}
-        if os.path.isfile('SP/list{}.pkl'.format(self.k)):
-            with open("SP/list{}.pkl".format(self.k), 'rb') as file:
-                self.List.update(pickle.load(file))
+        
+        if os.path.isfile('SP/list{}.txt'.format(self.k)):
+            with open("SP/list{}.txt".format(self.k), 'r') as file:
+                n= Symbol('n')
+                self.List.update(eval(file.read()))
+                
+#         if os.path.isfile('SP/list{}.pkl'.format(self.k)):
+#             with open("SP/list{}.pkl".format(self.k), 'rb') as file:
+#                 self.List.update(pickle.load(file))
+
         else:
             if not os.path.exists('SP'):
                 os.makedirs('SP')
             else:
                 pass
             self.List.update(SchurPolyGenerator(self.k).ReciprocalList)
-            with open("SP/list{}.pkl".format(self.k), "wb") as fp:   #Pickling
-                pickle.dump(self.List, fp)
+            
+            with open("SP/list{}.txt".format(self.k), "w") as fp:   #Pickling
+                fp.write(str(self.List))
+            
+#             with open("SP/list{}.pkl".format(self.k), "wb") as fp:   #Pickling
+#                 pickle.dump(self.List, fp)
         
 
 ########## Weingarten Functions ##########
@@ -260,8 +281,12 @@ def weigartenFunctionGenerator(k,display,record):
         else:
             pass
         
-        with open("Weingarten/functions{}.pkl".format(k), "wb") as fp:   #Pickling
-            pickle.dump(WFs, fp)
+        with open("Weingarten/functions{}.txt".format(k), "w") as fp:
+            fp.write(str(WFs))
+        
+#         with open("Weingarten/functions{}.pkl".format(k), "wb") as fp:   #Pickling
+#             pickle.dump(WFs, fp)
+            
     else:
         pass
 
@@ -276,8 +301,12 @@ class WFs:
         else:
             pass
         
-        with open("Weingarten/functions{}.pkl".format(self.k), "wb") as fp:   #Pickling
-            pickle.dump(self.wfs, fp)
+        with open("Weingarten/functions{}.txt".format(self.k), "w") as fp:
+            fp.write(str(self.wfs))
+        
+#         with open("Weingarten/functions{}.pkl".format(self.k), "wb") as fp:   #Pickling
+#             pickle.dump(self.wfs, fp)
+            
     
 
 

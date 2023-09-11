@@ -9,7 +9,7 @@ A detailed description of the functionality of this package with examples of its
 * Follow the [RTNI setup guide for MATHEMATICA](gettingstarted_MATHEMATICA.md) to setup RTNI
 * Look at the [list of files and sample code for MATHEMATICA](MATHEMATICA/README.md)
 
-### PYTHON
+### PYTHON (A major update was made as [PyRTNI2](https://github.com/MotohisaFukuda/PyRTNI2))
 
 * Follow the [RTNI setup guide for PYTHON](gettingstarted_PYTHON.md) to setup  RTNI
 * Look at the [list of files and sample code for PYTHON](PYTHON/README.md)
